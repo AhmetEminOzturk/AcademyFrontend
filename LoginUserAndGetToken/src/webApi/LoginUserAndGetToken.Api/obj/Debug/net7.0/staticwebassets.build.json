@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "zL4tbcJcJrIvdVAUzw+fucfV+7iEbyatzZ2DRnEGVhM=",
+  "Source": "LoginUserAndGetToken.Api",
+  "BasePath": "_content/LoginUserAndGetToken.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

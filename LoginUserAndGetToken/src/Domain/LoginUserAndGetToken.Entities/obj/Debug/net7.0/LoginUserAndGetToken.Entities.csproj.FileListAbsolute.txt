@@ -1,0 +1,12 @@
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Domain\LoginUserAndGetToken.Entities\bin\Debug\net7.0\LoginUserAndGetToken.Entities.deps.json
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Domain\LoginUserAndGetToken.Entities\bin\Debug\net7.0\LoginUserAndGetToken.Entities.dll
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Domain\LoginUserAndGetToken.Entities\bin\Debug\net7.0\LoginUserAndGetToken.Entities.pdb
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Domain\LoginUserAndGetToken.Entities\obj\Debug\net7.0\LoginUserAndGetToken.Entities.csproj.AssemblyReference.cache
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Domain\LoginUserAndGetToken.Entities\obj\Debug\net7.0\LoginUserAndGetToken.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Domain\LoginUserAndGetToken.Entities\obj\Debug\net7.0\LoginUserAndGetToken.Entities.AssemblyInfoInputs.cache
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Domain\LoginUserAndGetToken.Entities\obj\Debug\net7.0\LoginUserAndGetToken.Entities.AssemblyInfo.cs
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Domain\LoginUserAndGetToken.Entities\obj\Debug\net7.0\LoginUserAndGetToken.Entities.csproj.CoreCompileInputs.cache
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Domain\LoginUserAndGetToken.Entities\obj\Debug\net7.0\LoginUserAndGetToken.Entities.dll
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Domain\LoginUserAndGetToken.Entities\obj\Debug\net7.0\refint\LoginUserAndGetToken.Entities.dll
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Domain\LoginUserAndGetToken.Entities\obj\Debug\net7.0\LoginUserAndGetToken.Entities.pdb
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Domain\LoginUserAndGetToken.Entities\obj\Debug\net7.0\ref\LoginUserAndGetToken.Entities.dll

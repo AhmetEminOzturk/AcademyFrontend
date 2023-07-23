@@ -1,0 +1,17 @@
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Infrastructure\LoginUserAndGetToken.Infrastructure\bin\Debug\net7.0\LoginUserAndGetToken.Infrastructure.deps.json
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Infrastructure\LoginUserAndGetToken.Infrastructure\bin\Debug\net7.0\LoginUserAndGetToken.Infrastructure.runtimeconfig.json
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Infrastructure\LoginUserAndGetToken.Infrastructure\bin\Debug\net7.0\LoginUserAndGetToken.Infrastructure.dll
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Infrastructure\LoginUserAndGetToken.Infrastructure\bin\Debug\net7.0\LoginUserAndGetToken.Infrastructure.pdb
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Infrastructure\LoginUserAndGetToken.Infrastructure\bin\Debug\net7.0\LoginUserAndGetToken.Entities.dll
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Infrastructure\LoginUserAndGetToken.Infrastructure\bin\Debug\net7.0\LoginUserAndGetToken.Entities.pdb
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Infrastructure\LoginUserAndGetToken.Infrastructure\obj\Debug\net7.0\LoginUserAndGetToken.Infrastructure.csproj.AssemblyReference.cache
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Infrastructure\LoginUserAndGetToken.Infrastructure\obj\Debug\net7.0\LoginUserAndGetToken.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Infrastructure\LoginUserAndGetToken.Infrastructure\obj\Debug\net7.0\LoginUserAndGetToken.Infrastructure.AssemblyInfoInputs.cache
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Infrastructure\LoginUserAndGetToken.Infrastructure\obj\Debug\net7.0\LoginUserAndGetToken.Infrastructure.AssemblyInfo.cs
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Infrastructure\LoginUserAndGetToken.Infrastructure\obj\Debug\net7.0\LoginUserAndGetToken.Infrastructure.csproj.CoreCompileInputs.cache
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Infrastructure\LoginUserAndGetToken.Infrastructure\obj\Debug\net7.0\LoginUserAndGetToken.Infrastructure.csproj.CopyComplete
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Infrastructure\LoginUserAndGetToken.Infrastructure\obj\Debug\net7.0\LoginUserAndGetToken.Infrastructure.dll
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Infrastructure\LoginUserAndGetToken.Infrastructure\obj\Debug\net7.0\refint\LoginUserAndGetToken.Infrastructure.dll
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Infrastructure\LoginUserAndGetToken.Infrastructure\obj\Debug\net7.0\LoginUserAndGetToken.Infrastructure.pdb
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Infrastructure\LoginUserAndGetToken.Infrastructure\obj\Debug\net7.0\LoginUserAndGetToken.Infrastructure.genruntimeconfig.cache
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Infrastructure\LoginUserAndGetToken.Infrastructure\obj\Debug\net7.0\ref\LoginUserAndGetToken.Infrastructure.dll

@@ -1,0 +1,17 @@
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Application\LoginUserAndGetToken.Services\bin\Debug\net7.0\LoginUserAndGetToken.Services.deps.json
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Application\LoginUserAndGetToken.Services\bin\Debug\net7.0\LoginUserAndGetToken.Services.dll
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Application\LoginUserAndGetToken.Services\bin\Debug\net7.0\LoginUserAndGetToken.Services.pdb
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Application\LoginUserAndGetToken.Services\bin\Debug\net7.0\LoginUserAndGetToken.Entities.dll
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Application\LoginUserAndGetToken.Services\bin\Debug\net7.0\LoginUserAndGetToken.Infrastructure.dll
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Application\LoginUserAndGetToken.Services\bin\Debug\net7.0\LoginUserAndGetToken.Infrastructure.pdb
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Application\LoginUserAndGetToken.Services\bin\Debug\net7.0\LoginUserAndGetToken.Entities.pdb
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Application\LoginUserAndGetToken.Services\obj\Debug\net7.0\LoginUserAndGetToken.Services.csproj.AssemblyReference.cache
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Application\LoginUserAndGetToken.Services\obj\Debug\net7.0\LoginUserAndGetToken.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Application\LoginUserAndGetToken.Services\obj\Debug\net7.0\LoginUserAndGetToken.Services.AssemblyInfoInputs.cache
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Application\LoginUserAndGetToken.Services\obj\Debug\net7.0\LoginUserAndGetToken.Services.AssemblyInfo.cs
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Application\LoginUserAndGetToken.Services\obj\Debug\net7.0\LoginUserAndGetToken.Services.csproj.CoreCompileInputs.cache
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Application\LoginUserAndGetToken.Services\obj\Debug\net7.0\LoginUserAndGetToken.Services.csproj.CopyComplete
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Application\LoginUserAndGetToken.Services\obj\Debug\net7.0\LoginUserAndGetToken.Services.dll
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Application\LoginUserAndGetToken.Services\obj\Debug\net7.0\refint\LoginUserAndGetToken.Services.dll
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Application\LoginUserAndGetToken.Services\obj\Debug\net7.0\LoginUserAndGetToken.Services.pdb
+C:\GitHub\AcademyFrontend\LoginUserAndGetToken\src\Application\LoginUserAndGetToken.Services\obj\Debug\net7.0\ref\LoginUserAndGetToken.Services.dll

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\LoginUserAndGetToken.Api.props" />
+</Project>
