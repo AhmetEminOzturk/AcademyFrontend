@@ -1,67 +1,31 @@
 import React from 'react'
+import {arr , appTitle } from '../datas/product'
 
 function Home(){
  return(
     <>
-        <h1>App Title</h1>
+        <h1>{appTitle}</h1>
         <div className="row">
-            <div className='d-s-none mb-2 col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3'>
+
+            {arr.map(( item, index ) =>
+            <div key={index} className='mb-2 col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3'>
                 <div className="card">
-                    <img src="https://placebeard.it/640x360?1" className="card-img-top"/>
+                    <img src={item.image} className="card-img-top" alt={item.title} title={item.title}/>
                     <div className="card-body">
-                        <h5 className="card-title">Card title</h5>
-                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h5 className="card-title">{item.title}</h5>
+                        <p className="card-text">{item.detail}</p>
                         <div className='row'>
                             <div className='mb-1 col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6'>
-                                <a href="#" className="btn btn-danger w-100">Add</a>
+                                <a href="?#" className="btn btn-danger w-100">Add</a>
                             </div> 
                             <div className='col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6'>
-                                <a href="#" className="btn btn-primary w-100">Detail</a>
+                                <a href="?#" className="btn btn-primary w-100">Detail</a>
                             </div>                           
                         </div>
                     </div>
                 </div>
             </div>
-            <div className='mb-2 col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3'>
-                <div className="card">
-                    <img src="https://placebeard.it/640x360?2" className="card-img-top"/>
-                    <div className="card-body">
-                        <h5 className="card-title">Card title</h5>
-                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" className="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div className='mb-2 col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3'>
-                <div className="card">
-                    <img src="https://placebeard.it/640x360?3" className="card-img-top"/>
-                    <div className="card-body">
-                        <h5 className="card-title">Card title</h5>
-                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" className="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div className='mb-2 col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3'>
-                <div className="card">
-                    <img src="https://placebeard.it/640x360?4" className="card-img-top"/>
-                    <div className="card-body">
-                        <h5 className="card-title">Card title</h5>
-                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" className="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div className='mb-2 col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3'>
-                <div className="card">
-                    <img src="https://placebeard.it/640x360?5" className="card-img-top"/>
-                    <div className="card-body">
-                        <h5 className="card-title">Card title</h5>
-                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" className="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
+            )}          
         </div>
     </>
  )   
