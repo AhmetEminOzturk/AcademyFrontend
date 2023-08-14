@@ -1,12 +1,14 @@
 import React from 'react'
 import {arr , appTitle } from '../datas/product'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 function Home(){
  return(
     <>
+         <Navbar/>   
         <h1>{appTitle}</h1>
         <div className="row">
-
             {arr.map(( item, index ) =>
             <div key={index} className='mb-2 col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3'>
                 <div className="card">
@@ -27,6 +29,7 @@ function Home(){
             </div>
             )}          
         </div>
+        <Footer/>
     </>
  )   
 }
