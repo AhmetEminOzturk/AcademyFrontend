@@ -1,13 +1,13 @@
-import React, { FormEvent } from 'react'
+import React, { useState , FormEvent } from 'react'
 
 function Login() {
+  
+  const[ email, setEmail] = useState('')
 
   const fncLogin = ( evt: FormEvent) => {
     evt.preventDefault()  
     console.log("Giriş yapıldı")
   }
-
-
   return (
     <>
     <div className='mb-3'>
