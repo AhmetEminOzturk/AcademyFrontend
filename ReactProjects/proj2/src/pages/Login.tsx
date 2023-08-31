@@ -3,10 +3,16 @@ import React, { useState , FormEvent } from 'react'
 function Login() {
   
   const[ email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
   const fncLogin = ( evt: FormEvent) => {
     evt.preventDefault()  
-    console.log("Giriş yapıldı")
+    if (email!== '' && password !== '') {
+      console.log(email, password, "Giriş yapıldı")
+    }
+    else{
+      window.alert("Lütfen tüm alanları doldurunuz!")
+    }
   }
   return (
     <>
@@ -17,7 +23,10 @@ function Login() {
             <form onSubmit={fncLogin}>
               <h2>Admin Login</h2>
               <div className='mb-3'>
-                <input placeholder='E-Mail' type='email' className='form-control'/>
+                <input required onChange={(evt) => setEmail(evt.target.value) } placeholder='E-Mail' type='email' className='form-control'/>
+              </div>
+              <div className='mb-3'>
+                <input required onChange={(evt) => setPassword(evt.target.value) } placeholder='Password' type='password' className='form-control'/>
               </div>
               <button className='btn btn-success'>Send</button>
             </form>
