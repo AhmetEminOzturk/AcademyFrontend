@@ -22,6 +22,7 @@ function Login() {
         <div className=' col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 col-xxl-4'>
             <form onSubmit={fncLogin}>
               <h2>Admin Login</h2>
+              <h2>{email}</h2>
               <div className='mb-3'>
                 <input required onChange={(evt) => setEmail(evt.target.value) } placeholder='E-Mail' type='email' className='form-control'/>
               </div>
