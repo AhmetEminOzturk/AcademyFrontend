@@ -13,7 +13,13 @@ function Login() {
         //1.parametre ->key
         //2. parametre ->value
         //sessionStorage.setItem('user', email)
-        localStorage.setItem('user', email)
+        const item = {
+          email: email,
+          name: 'Ahmet Emin Öztürk',
+          phone: '555555555'
+        }
+        const stItem = JSON.stringify(item)
+        localStorage.setItem('user', stItem)
       }
       else {
         setErrorMessage('Kullanıcı adı veya şifre hatalıdır.')
