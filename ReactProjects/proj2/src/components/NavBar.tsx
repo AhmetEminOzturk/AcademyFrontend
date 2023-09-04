@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { IUser } from '../models/IUser'
+import { decrypt } from '../util'
 
 
 
@@ -10,10 +11,17 @@ function NavBar() {
 
   const [item, setItem] = useState<IUser>()
   useEffect(() => {
-      const stData = localStorage.getItem("user")
+      var stData = localStorage.getItem("user")
       if (stData !== null) {
+        try {
+          stData= decrypt(stData)
           const obj = JSON.parse(stData) as IUser
           setItem(obj)    
+        } catch (error) {
+          localStorage.removeItem('user')
+          navigate('/')
+        }
+        
       }else{
           navigate('/')
       }

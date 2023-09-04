@@ -1,5 +1,6 @@
 import React, { useState, FormEvent } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { encrypt } from '../util'
 
 function Login() {
 
@@ -21,7 +22,8 @@ function Login() {
           name: 'Ahmet Emin Öztürk',
           phone: '555555555'
         }
-        const stItem = JSON.stringify(item)
+        var stItem = JSON.stringify(item)
+        stItem = encrypt(stItem)
         localStorage.setItem('user', stItem)
         navigate('/dashboard')
       }
