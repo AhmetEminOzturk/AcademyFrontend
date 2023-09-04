@@ -12,7 +12,8 @@ function Login() {
       if (email === 'ahmet@gmail.com' && password === '12345') {
         //1.parametre ->key
         //2. parametre ->value
-        sessionStorage.setItem('user', email)
+        //sessionStorage.setItem('user', email)
+        localStorage.setItem('user', email)
       }
       else {
         setErrorMessage('Kullanıcı adı veya şifre hatalıdır.')
