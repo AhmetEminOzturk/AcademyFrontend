@@ -1,6 +1,9 @@
 import React, { useState, FormEvent } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function Login() {
+
+  const navigate = useNavigate()
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -11,7 +14,7 @@ function Login() {
     if (email !== '' && password !== '') {
       if (email === 'ahmet@gmail.com' && password === '12345') {
         //1.parametre ->key
-        //2. parametre ->value
+        //2.parametre ->value
         //sessionStorage.setItem('user', email)
         const item = {
           email: email,
@@ -20,6 +23,7 @@ function Login() {
         }
         const stItem = JSON.stringify(item)
         localStorage.setItem('user', stItem)
+        navigate('/dashboard')
       }
       else {
         setErrorMessage('Kullanıcı adı veya şifre hatalıdır.')
