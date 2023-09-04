@@ -27,6 +27,14 @@ function NavBar() {
       }
   }, [])
   
+  const logOut = () => {
+    const answer = window.confirm('Are you sure?')
+    if(answer===true){
+      localStorage.removeItem('user')
+      navigate('/')
+    }
+    
+}
 
   return (
     <>
@@ -52,7 +60,7 @@ function NavBar() {
             <li><a className="dropdown-item" href="#">Action</a></li>
             <li><a className="dropdown-item" href="#">Another action</a></li>
             <li><hr className="dropdown-divider"/></li>
-            <li><a className="dropdown-item" href="#">Something else here</a></li>
+            <li><a onClick={logOut} className="dropdown-item" role='button' >Logout</a></li>
           </ul>
         </li>
         <li className="nav-item">
