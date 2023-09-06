@@ -4,12 +4,14 @@ import { getSingleProduct } from '../Api'
 import { Product } from '../models/IProducts'
 import { toast } from 'react-toastify'
 import { Rating } from 'react-simple-star-rating'
+import ImageGallery from "react-image-gallery";
 
 function Detail() {
 
     const { id } = useParams()
     const navigate = useNavigate()
     const [item, setItem] = useState<Product>()
+    const [images, setImages] = useState<any[]>()
 
     useEffect(() => {
         const idNum = Number(id)
@@ -24,8 +26,20 @@ function Detail() {
             })
             getSingleProduct(idNum).then(res => {
                 const dt = res.data
-                console.log(dt)
                 setItem(dt)
+
+                const arr = []
+
+                for (let i = 0; i < dt.images.length; i++) {
+                    const item = dt.images[i];
+                    const image = {
+                        original: item,
+                        thumbnail: item
+                    }
+                    arr.push(image)
+                }
+                setImages(arr)
+
                 toast.dismiss()
             }).catch(err => {
                 toast.dismiss()
@@ -42,23 +56,33 @@ function Detail() {
             {item &&
                 <>
                     <div className='row'>
-                        <div className='col-sm-6'>
-                            <h2>{item.title}</h2>                           
+                        <div className='col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 mb-3'>
+                            <h2>{item.title}</h2>
                             <div className="card ">
                                 <div className="card-body">
                                     <p>{item.description}</p>
                                 </div>
                             </div>
                             <span className="badge rounded-pill text-bg-success fs-5 p-2 mt-3 mb-3" >{item.price}₺</span>
-                            <span className='float-end mt-3 mb-3' style={{marginLeft:'1rem'}}><Rating initialValue={item.rating} readonly={true} size={22} showTooltip={true}/></span>
+                            <span className='float-end mt-3 mb-3' style={{ marginLeft: '1rem' }}><Rating initialValue={item.rating} readonly={true} size={22} showTooltip={true} /></span>
                             <div>
-                            <span className="badge rounded-pill text-bg-secondary fs-6 p-2 mt-3 mb-3" style={{marginRight: '1rem'}}>-% {item.discountPercentage}</span>
-                            <span className="badge rounded-pill text-bg-secondary fs-6 p-2 mt-3 mb-3" style={{marginRight: '1rem'}}>Stock: {item.stock}</span>
-                            <span className="badge rounded-pill text-bg-secondary fs-6 p-2 mt-3 mb-3" style={{marginRight: '1rem'}}>{item.brand}</span>
-                            <span className="badge rounded-pill text-bg-secondary fs-6 p-2 mt-3 mb-3" style={{marginRight: '1rem'}}>{item.category}</span>
+                                <span className="badge rounded-pill text-bg-secondary fs-6 p-2 mt-3 mb-3" style={{ marginRight: '1rem' }}>-% {item.discountPercentage}</span>
+                                <span className="badge rounded-pill text-bg-secondary fs-6 p-2 mt-3 mb-3" style={{ marginRight: '1rem' }}>Stock: {item.stock}</span>
+                                <span className="badge rounded-pill text-bg-secondary fs-6 p-2 mt-3 mb-3" style={{ marginRight: '1rem' }}>{item.brand}</span>
+                                <span className="badge rounded-pill text-bg-secondary fs-6 p-2 mt-3 mb-3" style={{ marginRight: '1rem' }}>{item.category}</span>
                             </div>
                         </div>
-                        <div className='col-sm-6'></div>
+                        <div className='col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 mb-3'>
+                            {images &&
+                                <ImageGallery 
+                                items={images} 
+                                showNav={false}
+                                showPlayButton={false}
+                                useBrowserFullscreen={false}
+                                autoPlay={true}
+                                />
+                            }
+                        </div>
                     </div>
                 </>
             }
