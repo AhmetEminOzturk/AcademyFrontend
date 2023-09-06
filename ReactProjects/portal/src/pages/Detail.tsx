@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { getSingleProduct } from '../Api'
-import { Product } from '../models/IProducts'
+import { get4RandomProducts, getSingleProduct } from '../Api'
+import { IProducts, Product } from '../models/IProducts'
 import { toast } from 'react-toastify'
 import { Rating } from 'react-simple-star-rating'
 import ImageGallery from "react-image-gallery";
+import ProductItem from '../components/ProductItem'
 
 function Detail() {
 
@@ -12,6 +13,7 @@ function Detail() {
     const navigate = useNavigate()
     const [item, setItem] = useState<Product>()
     const [images, setImages] = useState<any[]>()
+    const [proObj, setProObj] = useState<IProducts>()
 
     useEffect(() => {
         const idNum = Number(id)
@@ -51,6 +53,19 @@ function Detail() {
         }
     }, [])
 
+
+
+
+    useEffect(() => {
+        const skip = Math.floor(Math.random() * 96)
+        get4RandomProducts(4, skip).then(res => {
+            const dt = res.data
+            setProObj(dt)
+        })
+
+    }, [])
+
+
     return (
         <>
             {item &&
@@ -74,15 +89,23 @@ function Detail() {
                         </div>
                         <div className='col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 mb-3'>
                             {images &&
-                                <ImageGallery 
-                                items={images} 
-                                showNav={false}
-                                showPlayButton={false}
-                                useBrowserFullscreen={false}
-                                autoPlay={true}
+                                <ImageGallery
+                                    items={images}
+                                    showNav={false}
+                                    showPlayButton={false}
+                                    useBrowserFullscreen={false}
+                                    autoPlay={true}
                                 />
                             }
                         </div>
+                    </div>
+
+                    <h2>Sizin için seçtiklerimiz</h2>
+                    <hr></hr>
+                    <div className="row">
+                        {proObj && proObj.products.map((item, index) =>
+                            <ProductItem item={item} key={index} />
+                        )}
                     </div>
                 </>
             }
