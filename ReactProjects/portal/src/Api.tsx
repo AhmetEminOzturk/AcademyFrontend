@@ -25,3 +25,9 @@ export const get4RandomProducts = (limit:number , skip:number) => {
     }
     return config.get<IProducts>('products' , {params:sendObj})
  }
+
+ //Get All Categories
+export const getAllCats = () => {
+    return config.get<string[]>('products/categories')
+ }
+ 
