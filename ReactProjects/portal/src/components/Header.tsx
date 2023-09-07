@@ -13,6 +13,10 @@ function Header() {
       }
     }, [])
     
+    const logOut= () => {
+        localStorage.removeItem('customer')
+        window.location.href='/'
+    }
 
     return (
         <>
@@ -25,13 +29,20 @@ function Header() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
 
-                            {customer===undefined &&
+                            {!customer&&
                             <>
                             <li className="nav-item">
                                 <NavLink className={"nav-link"} to={'/login'}>Login</NavLink>
                             </li>
+                            </>
+                            }
+                            {customer&&
+                            <>
                             <li className="nav-item">
-                                <a className="nav-link disabled" aria-disabled="true"></a>
+                                <a onClick={logOut} className='nav-link' role='button'>Logout</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link disabled" aria-disabled="true">{customer.firstName + " " + customer.lastName}</a>
                             </li>
                             </>
                             }

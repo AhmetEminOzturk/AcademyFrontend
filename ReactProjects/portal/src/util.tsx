@@ -1,4 +1,5 @@
 import { UserModel } from "./models/UserModel"
+import CryptoJS from 'crypto-js'
 
 export const firstUpper = (word: string) => {
     const firstLetter = word.charAt(0)
@@ -16,11 +17,23 @@ export const getCustomer = () =>{
     }else {
         //customer not null!
         try {
-            const user:UserModel = JSON.parse(st)
+            const plainText = decrypt(st)
+            const user:UserModel = JSON.parse(plainText)
             return user
         } catch (error) { 
             localStorage.removeItem('customer')
         }
         return null
     }
+}
+
+export const encrypt = (plainText:string)=> {
+    const cipherText = CryptoJS.AES.encrypt(plainText,'key123')
+    return cipherText.toString()
+}
+
+export const decrypt = (cipherText:string) => {
+    const bytes = CryptoJS.AES.decrypt(cipherText, 'key123')
+    const plainText =bytes.toString(CryptoJS.enc.Utf8)
+    return plainText
 }
