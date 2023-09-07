@@ -7,6 +7,7 @@ import SimpleImageSlider from "react-simple-image-slider";
 import img1 from '../assets/1.jpeg';
 import img2 from '../assets/2.jpeg';
 import NavBar from '../components/NavBar';
+import Header from '../components/Header';
 
 function Home() {
 
@@ -30,6 +31,7 @@ function Home() {
 
   return (
     <>
+    <Header/>
     <div className='mb-3'>
       <NavBar/>
     </div>

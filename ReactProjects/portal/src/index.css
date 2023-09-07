@@ -21,8 +21,9 @@
 
 .headerNav .navbar-nav a{
     border: 1px solid #d0c3c3;
-    margin: 4px;
-    border-radius: 7px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
     padding: 5px;
 }
 

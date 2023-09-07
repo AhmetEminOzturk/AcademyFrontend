@@ -6,10 +6,12 @@ import { toast } from 'react-toastify'
 import { Rating } from 'react-simple-star-rating'
 import ImageGallery from "react-image-gallery";
 import ProductItem from '../components/ProductItem'
+import NavBar from '../components/NavBar'
+import Header from '../components/Header'
 
 function Detail() {
 
-    const { id } = useParams()
+    const { id } = useParams() //Sayfalar arası geçiş datanın taşınması UseParams
     const navigate = useNavigate()
     const [item, setItem] = useState<Product>()
     const [images, setImages] = useState<any[]>()
@@ -68,8 +70,11 @@ function Detail() {
 
     return (
         <>
+        
             {item &&
                 <>
+                <Header/>
+                <NavBar/>
                     <div className='row'>
                         <div className='col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 mb-3'>
                             <h2>{item.title}</h2>

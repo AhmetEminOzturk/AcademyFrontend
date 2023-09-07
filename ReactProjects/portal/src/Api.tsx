@@ -31,3 +31,8 @@ export const getAllCats = () => {
     return config.get<string[]>('products/categories')
  }
  
+
+ //Single Category in Products
+ export const singleCategoryProducts=(catName:string)=>{
+    return config.get<IProducts>('products/category/'+catName)
+ }
