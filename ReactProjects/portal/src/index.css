@@ -14,3 +14,18 @@
 .image-gallery-slide img {
     height: 350px;
 }
+
+.headerNav .navbar-nav {
+    flex-wrap: wrap;  
+}
+
+.headerNav .navbar-nav a{
+    border: 1px solid #d0c3c3;
+    margin: 4px;
+    border-radius: 7px;
+    padding: 5px;
+}
+
+.headerNav .navbar-nav a:hover{
+    border: 1px solid #dadada;
+}
