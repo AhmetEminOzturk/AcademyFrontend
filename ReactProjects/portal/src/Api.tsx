@@ -68,3 +68,13 @@ export const getAllCats = () => {
  export const userCart = (id:number)=> {
     return config.get<UserCartModel>('carts/user/' +id)
  }
+
+ //Search
+ export const search = (q:string , skip:number) =>{
+    const sendObj = {
+        q:q,
+        limit:8,
+        skip:skip
+    }
+    return config.get<IProducts>('products/search', {params:sendObj})
+ }
