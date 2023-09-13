@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { FormEvent, useEffect, useState } from 'react'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { getCustomer } from '../util'
 import { UserModel } from '../models/UserModel'
 import { userCart } from '../Api'
@@ -25,6 +25,13 @@ function Header() {
     const logOut= () => {
         localStorage.removeItem('customer')
         window.location.href='/'
+    }
+
+    const navigate = useNavigate()
+    const [search, setSearch] = useState('')
+    const fncSendSearch = (evt:FormEvent) => {
+        evt.preventDefault()
+        navigate('/search/'+ search )
     }
 
     return (
@@ -59,8 +66,8 @@ function Header() {
                             </>
                             }
                         </ul>
-                        <form className="d-flex" role="search">
-                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <form onSubmit={fncSendSearch} className="d-flex" role="search">
+                            <input onChange={(evt)=> setSearch(evt.target.value)} className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                             <button className="btn btn-outline-success" type="submit">Search</button>
                         </form>
                     </div>
