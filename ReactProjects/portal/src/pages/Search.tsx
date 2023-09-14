@@ -5,34 +5,72 @@ import { useParams } from 'react-router-dom'
 import { search } from '../Api'
 import ProductItem from '../components/ProductItem'
 import { IProducts } from '../models/IProducts'
+import load from '../assets/load.gif'
 
 function Search() {
 
-    const {q} = useParams()
-    const [proObj, setProObj] = useState<IProducts>()
-    useEffect(() => {
-        if(q){
-            search(q,0).then(res=> {
-            const dt = res.data
-            if(dt){
-                setProObj(dt)
-            }
-      })
-        } 
-    }, [])
+    const { q } = useParams()
+    const [proObj, setProObj] = useState<IProducts | null>()
+    const [skipCount, setSkipCount] = useState(0)
+    const [limitCount, setLimitCount] = useState(8)
+    const [totalPage, setTotalPage] = useState(0)
+    const [pageArr, setPageArr] = useState<number[]>([])
+    const [isLoad, setIsLoad] = useState(false)
     
-  return (
-    <>
-    <Header/>
-    <NavBar/>
-    <h2>Search Result : {q}</h2>
-    <div className="row">
-        {proObj && proObj.products.map((item, index) =>
-          <ProductItem item={item} key={index} />
-        )}
-      </div>
-    </>
-  )
+    
+    useEffect(() => {
+        goToData(0)
+    }, [])
+
+    const goToData = (skip: number) => {
+      
+        if (q) {
+            setIsLoad(true)
+            setProObj(null)
+            setSkipCount(skip)
+
+            search(q, limitCount, skip).then(res => {
+                const dt = res.data
+                if (dt) {
+                    setProObj(dt)
+                    var pageCount = Math.ceil(dt.total / limitCount)
+                    const arr = []
+                    for (let i = 0; i < pageCount; i++) {
+                        arr.push(i)
+                    }
+                    setPageArr(arr)
+                }
+            }).finally( ()=> {
+                setIsLoad(false)
+            })
+        }
+    }        
+
+    return (
+        <>
+            <Header />
+            <NavBar />
+            <h2>Search Result : {q}</h2>
+            {isLoad ===true &&
+            <div className='text-center'>
+                <img className='img-fluid' style={{ maxWidth: 300 }} src={load}></img>
+            </div>
+            }
+            <div className="row">
+                {proObj && proObj.products.map((item, index) =>
+                    <ProductItem item={item} key={index} />
+                )}
+                <nav>
+                    <ul className="pagination justify-content-center">
+                        {pageArr.map((item, index) =>
+                            <li key={index} className={skipCount === item ? 'page-item active' : 'page-item'}><a onClick={() => goToData(item)} className="page-link" role='button'>{(item + 1)}</a></li>
+                        )}
+
+                    </ul>
+                </nav>
+            </div>
+        </>
+    )
 }
 
 export default Search

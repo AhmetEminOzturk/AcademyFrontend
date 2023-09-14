@@ -70,11 +70,11 @@ export const getAllCats = () => {
  }
 
  //Search
- export const search = (q:string , skip:number) =>{
+ export const search = (q:string , limitCount:number, skip:number) =>{
     const sendObj = {
         q:q,
-        limit:8,
-        skip:skip
+        limit:limitCount,
+        skip:limitCount*skip
     }
     return config.get<IProducts>('products/search', {params:sendObj})
  }
