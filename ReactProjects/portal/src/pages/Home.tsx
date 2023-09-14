@@ -9,6 +9,7 @@ import img2 from '../assets/2.jpeg';
 import NavBar from '../components/NavBar';
 import Header from '../components/Header';
 
+
 function Home() {
 
   const images = [
