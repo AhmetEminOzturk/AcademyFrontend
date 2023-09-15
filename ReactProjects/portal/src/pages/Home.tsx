@@ -3,6 +3,8 @@ import { getAllProducts } from '../Api'
 import { IProducts } from '../models/IProducts'
 import ProductItem from '../components/ProductItem'
 import SimpleImageSlider from "react-simple-image-slider";
+import {Helmet} from "react-helmet";
+
 //import images
 import img1 from '../assets/1.jpeg';
 import img2 from '../assets/2.jpeg';
@@ -32,6 +34,10 @@ function Home() {
 
   return (
     <>
+    <Helmet>
+    <title>Portal E-Commerce</title>
+    <meta name='description' content='Portal E-Commerce Site'></meta>
+    </Helmet>
     <Header/>
     <div className='mb-3'>
       <NavBar/>

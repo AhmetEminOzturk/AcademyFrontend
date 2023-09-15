@@ -6,6 +6,7 @@ import { search } from '../Api'
 import ProductItem from '../components/ProductItem'
 import { IProducts } from '../models/IProducts'
 import load from '../assets/load.gif'
+import { Helmet } from 'react-helmet'
 
 function Search() {
 
@@ -16,14 +17,14 @@ function Search() {
     const [totalPage, setTotalPage] = useState(0)
     const [pageArr, setPageArr] = useState<number[]>([])
     const [isLoad, setIsLoad] = useState(false)
-    
-    
+
+
     useEffect(() => {
         goToData(0)
     }, [])
 
     const goToData = (skip: number) => {
-      
+
         if (q) {
             setIsLoad(true)
             setProObj(null)
@@ -40,21 +41,25 @@ function Search() {
                     }
                     setPageArr(arr)
                 }
-            }).finally( ()=> {
+            }).finally(() => {
                 setIsLoad(false)
             })
         }
-    }        
+    }
 
     return (
         <>
+            <Helmet>
+                <title>Portal Search</title>
+                <meta name='description' content={'Portal-Search'}></meta>
+            </Helmet>
             <Header />
             <NavBar />
             <h2>Search Result : {q}</h2>
-            {isLoad ===true &&
-            <div className='text-center'>
-                <img className='img-fluid' style={{ maxWidth: 300 }} src={load}></img>
-            </div>
+            {isLoad === true &&
+                <div className='text-center'>
+                    <img className='img-fluid' style={{ maxWidth: 300 }} src={load}></img>
+                </div>
             }
             <div className="row">
                 {proObj && proObj.products.map((item, index) =>
