@@ -15,6 +15,7 @@ import Login from './pages/Login';
 import Cart from './pages/Cart';
 import Search from './pages/Search';
 import Footer from './components/Footer';
+import ContentDetails from './pages/ContentDetails';
 
 const route =
   <BrowserRouter>
@@ -26,6 +27,7 @@ const route =
       <Route path='/login' element={<Login />} />
       <Route path='/cart' element={<Cart />} />
       <Route path='/search/:q' element={<Search />} />
+      <Route path='/contentDetail/:id' element={<ContentDetails />} />
     </Routes>
     <Footer/>
   </BrowserRouter>

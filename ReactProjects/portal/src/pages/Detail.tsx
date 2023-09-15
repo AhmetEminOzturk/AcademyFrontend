@@ -10,6 +10,7 @@ import NavBar from '../components/NavBar'
 import Header from '../components/Header'
 import { getCustomer } from '../util'
 import { Helmet } from 'react-helmet'
+import { Animate } from 'react-simple-animate'
 
 function Detail() {
 
@@ -18,13 +19,14 @@ function Detail() {
     const [item, setItem] = useState<Product>()
     const [images, setImages] = useState<any[]>()
     const [proObj, setProObj] = useState<IProducts>()
-
+    const [isLoad, setIsLoad] = useState(false)
     useEffect(() => {
         const idNum = Number(id)
         if (Number.isNaN(idNum) || idNum < 1) {
             navigate('/')
         } else {
             //servis ziyaretinde bulun
+            setIsLoad(false)
             toast('Yüklenior', {
                 position: "top-center",
                 theme: "light",
@@ -47,6 +49,10 @@ function Detail() {
                 setImages(arr)
 
                 toast.dismiss()
+                setTimeout(() => {
+                   setIsLoad(true) 
+                }, 1000);
+                
             }).catch(err => {
                 toast.dismiss()
                 toast.error('Service Error!')
@@ -100,7 +106,17 @@ function Detail() {
                     <NavBar />
                     <div className='row'>
                         <div className='col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 mb-3'>
-                            <h2>{item.title}</h2>
+                            <Animate
+                                play={true}
+                                start={{ 
+                                    opacity:0,
+                                    transform: "translateX(100px)" }}
+                                end={{ 
+                                    opacity:1,
+                                    transform: "translateX(0px)" }}
+                            >
+                                <h2>{item.title}</h2>
+                            </Animate>                          
                             <div className="card ">
                                 <div className="card-body">
                                     <p>{item.description}</p>
